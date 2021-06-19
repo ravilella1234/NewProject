@@ -1,38 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38318" started-at="2021-06-18T00:57:05Z" finished-at="2021-06-18T00:57:43Z">
+  <suite name="Suite" duration-ms="50101" started-at="2021-06-19T00:37:25Z" finished-at="2021-06-19T00:38:15Z">
     <groups>
+      <group name="regression">
+        <method signature="TNG_001.amazon()[pri:0, instance:demogroup.SampleProject.TNG_001@3e3047e6]" name="amazon" class="demogroup.SampleProject.TNG_001"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="TNG_001.amazon()[pri:0, instance:demogroup.SampleProject.TNG_001@3e3047e6]" name="amazon" class="demogroup.SampleProject.TNG_001"/>
+      </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="38318" started-at="2021-06-18T00:57:05Z" finished-at="2021-06-18T00:57:43Z">
-      <class name="excelDataDriven.DataManagentFinalVersion">
-        <test-method status="PASS" signature="f(java.util.Hashtable)[pri:0, instance:excelDataDriven.DataManagentFinalVersion@55a561cf]" name="f" duration-ms="36743" started-at="2021-06-18T00:57:07Z" data-provider="getData" finished-at="2021-06-18T00:57:43Z">
+    <test name="Test" duration-ms="50101" started-at="2021-06-19T00:37:25Z" finished-at="2021-06-19T00:38:15Z">
+      <class name="demogroup.SampleProject.TNG_001">
+        <test-method status="PASS" signature="startProcess(java.lang.String)[pri:0, instance:demogroup.SampleProject.TNG_001@3e3047e6]" name="startProcess" is-config="true" duration-ms="24554" started-at="2021-06-19T00:37:25Z" finished-at="2021-06-19T00:37:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ExpectedResult=loginSuccess, RunMode=Y, Pasword=zoho2015, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="SKIP" signature="f(java.util.Hashtable)[pri:0, instance:excelDataDriven.DataManagentFinalVersion@55a561cf]" name="f" duration-ms="4" started-at="2021-06-18T00:57:43Z" data-provider="getData" finished-at="2021-06-18T00:57:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExpectedResult=loginSuccess, RunMode=N, Pasword=P1, UserName=U1, Browser=firefox}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
+        </test-method> <!-- startProcess -->
+        <test-method status="FAIL" signature="amazon()[pri:0, instance:demogroup.SampleProject.TNG_001@3e3047e6]" name="amazon" duration-ms="21908" started-at="2021-06-19T00:37:50Z" finished-at="2021-06-19T00:38:12Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Testcase is Skipped as set-to No...]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='field-keyword']"}
+  (Session info: chrome=91.0.4472.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-27L8JE7', ip: '10.0.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52638}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 37013461ecf9a9332b7470b189a06eb5
+*** Element info: {Using=name, value=field-keyword}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Testcase is Skipped as set-to No...
-at excelDataDriven.DataManagentFinalVersion.f(DataManagentFinalVersion.java:20)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='field-keyword']"}
+  (Session info: chrome=91.0.4472.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-27L8JE7', ip: '10.0.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52638}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 37013461ecf9a9332b7470b189a06eb5
+*** Element info: {Using=name, value=field-keyword}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+at org.openqa.selenium.By$ByName.findElement(By.java:284)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at demogroup.SampleProject.BaseTest.getElement(BaseTest.java:181)
+at demogroup.SampleProject.BaseTest.typeText(BaseTest.java:164)
+at demogroup.SampleProject.TNG_001.amazon(TNG_001.java:39)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -60,11 +91,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- excelDataDriven.DataManagentFinalVersion -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- amazon -->
+        <test-method status="PASS" signature="endProcess()[pri:0, instance:demogroup.SampleProject.TNG_001@3e3047e6]" name="endProcess" is-config="true" duration-ms="3517" started-at="2021-06-19T00:38:12Z" finished-at="2021-06-19T00:38:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- demogroup.SampleProject.TNG_001 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
